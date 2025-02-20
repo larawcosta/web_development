@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS resumo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <!-- internal style sheet: -->
+        <style type="text/CSS">
+            p{
+                color: rgb(0, 0, 0);
+            }
+            h1{
+                color: rgb(14, 15, 15);
+            }
+            /* declaração de id no css, usar apenas uma vez */
+            #principal{
+                background-color: white;
+            }
+            #bordasexemplo{
+                /* tamanho, tipo e cor */
+                /*border: 5px double rgb(241, 155, 80);*/
+                /* definindo 4 valores, eles são aplicados a cada lado da borda no sentido horário. Definindo 2, o primeiro é aplicado à parte de cima e de baixo e o segundo às laterais */
+                border-color: rgb(241, 155, 80) rgb(241, 141, 43) rgb(242, 131, 34) rgb(233, 113, 8);
+                border-width: 20px 15px 10px 5px;
+                border-style: solid double;
+                background-color: rgb(239, 206, 178);
+            }  
+            #fundo{
+                background-image: url('imagens/fundo.png');
+                /* repeat-x, repeat-y, no-repeat, repeat */
+                background-repeat: no-repeat;
+                /* scroll, fixed */
+                background-attachment: scroll;
+                /* poderia pôr apenas center porém com duas opções a primeira é aplicada em relação à horizontal e a segunda à vertical */
+                background-position: center center;
+            }
+            /* declaração de classe no css, pode usar em vários blocos */
+            .azul{
+                /* define a cor de fundo da tag */
+                background-color: rgb(54, 92, 79);
+                /* define a cor da letra do que houver dentro da tag */
+                color: rgb(0, 0, 0);
+            }
+            .exemplo{
+                background-color:antiquewhite;
+                /* define uma distância entre divs que estão dentro de uma mesma div */
+                margin: 2%;
+            }
+            .exemplo2{
+                background-color:rgb(204, 159, 219);
+                /* define uma distância entre divs que estão dentro de uma mesma div */
+                margin: 2%;
+            }
+            .fontesecores{
+                color:rgb(106, 10, 139);
+                /* tamanho da fonte */
+                font-size: 30px;
+                /* família da fonte (fontes parecidas são agrupadas em famílias) */
+                font-family: "courier new", lucinda, console, monospace;
+
+            }
+            .tamanhos{
+                /* 
+                px: tamanho fixo em pixels;
+                %: tamanho relativo;
+                em: tamanho relativo ao container pai.
+                obs.: 1em é o tamanho padrão em relação ao container pai
+                */
+                font-size: 2em;
+                font: normal 40px "courier new", lucinda, console, monospace;
+            }
+            .negrito{
+                /* bold, normal ou de 100 a 900 */
+                font-weight: 900;
+            }
+            .italico{
+                font-style: italic;
+            }
+            .formatacao{
+                /* underline, overline, line-through */
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="principal">
+            <h1>Estilo CSS (cascading style sheets)</h1> <hr>
+        </div>
+        <div>
+            <h2>Estrutura dos seletores:</h2>
+            <img src="imagens/Captura de tela 2025-01-10 130858.png">
+        </div> <hr>
+        <div>
+            <h2>Exemplos de formatação de parágrafos:</h2>
+            <!-- está em azul porque está formatado como parte da classe "azul" -->
+            <p class="azul">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <!-- está em preto porque não há formatação específica e no geral a tag "p" está com a cor vermelha -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div> <hr>
+        <div>
+            <h2> Sobre divs e sua organização: </h2>
+            <div class="azul">
+                <div class="exemplo">A</div>
+                <div class="exemplo">B</div>
+                <div class="exemplo">C</div>
+                <!-- span alinha dados em pequenos blocos -->
+                <div class="exemplo">
+                    <span class="exemplo2"> span 1 </span>
+                    <span class="exemplo2"> span 2 </span>
+                    <span class="exemplo2"> span 3 </span>
+                </div>
+            </div>
+        </div><hr>
+        <div>
+            <h2>Bordas:</h2>
+            <h3>Tipos:</h3>
+            <div id="bordasexemplo">
+                <ul>
+                    <li>dotted;</li>
+                    <li>dashed;</li>
+                    <li>solid;</li>
+                    <li>double;</li>
+                    <li>groove;</li>
+                    <li>ridge;</li>
+                    <li>inset;</li>
+                    <li>outset;</li>
+                    <li>none;</li>
+                    <li>hidden.</li>
+                </ul>
+            </div>
+        </div> <hr>
+        <div>
+            <h2>Fontes e cores</h2>
+            <p class="fontesecores">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+        </div><hr>
+        <div>
+            <h2>Tamanhos de texto</h2>
+            <p class="tamanhos">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+        </div><hr>
+        <div>
+            <h2>Estilos de texto:</h2>
+            <div class="tamanhos">
+                <p class="negrito">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+                <p class="italico">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+                <p class="formatacao">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2>Cor e imagem de fundo:</h2>
+            <div id="fundo">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </body>
+</html>
